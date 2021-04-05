@@ -1,29 +1,38 @@
 package task4;
-
-
-import java.util.Scanner;
-
 public class Rectangle {
-    double height, width;
-    public Rectangle(double height,double width){
-        this.height = height;
+    public Rectangle(float length, float width) {
+        this.length = length;
         this.width = width;
     }
 
-
-
-
-
-    public double getArea() {
-        return this.height * this.width;
-    }
-    public double getPerimeter() {
-        return 2*(this.height + this.width);
-    }
-    public String display(){
-        return "Rectangle width and height is:"+width+"  "+ height;
+    public float getLength() {
+        return length;
     }
 
+    public float getWidth() {
+        return width;
+    }
 
+    public void setLength(float length) {
+        this.length = length;
+    }
+
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    float length,width;
+
+    public Rectangle(){
+
+    }
+    public double getArea(){
+        return this.length*this.width;
+    }
+    public double getPerimeter(){
+        return (this.length+this.width)*2;
+   }
+   public String toString(){
+        return "Rectangle with length: "+this.length+ "  width: "+this.width;
+   }
 }
-
