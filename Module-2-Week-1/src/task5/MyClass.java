@@ -1,19 +1,25 @@
 package task5;
 
- public class MyClass {
-    public static void main(String[] args) {
-        Simple ob1 = new Simple();
-        
+import java.time.LocalDate;
+import java.time.Period;
+
+
+public class MyClass {
+    public  static int getAge(int year, int month, int dayOfMonth) {
+        return Period.between(
+                LocalDate.of(year, month, dayOfMonth),
+                LocalDate.now()
+        ).getYears();
+    }
+    public static   void main(String[] args) {
+
+        System.out.println(getAge(1998,10,22));
+
+
     }
 
 }
 
- class Simple{
 
-    private int a = 5;
 
-    private void msg() {
-        System.out.println("Hello java!");
-    }
 
-}

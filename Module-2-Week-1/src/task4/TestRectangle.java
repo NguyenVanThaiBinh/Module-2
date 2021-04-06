@@ -2,7 +2,7 @@ package task4;
 
 public class TestRectangle {
     public static void main(String[] args) {
-        Rectangle r1 = new Rectangle();
+        Rectangle r1 = new Rectangle(2,2);
         r1.setLength(5f);
         r1.setWidth(4f);
         System.out.println(r1.toString());

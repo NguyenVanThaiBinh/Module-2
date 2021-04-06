@@ -1,6 +1,10 @@
 package task4;
 
+import java.util.Scanner;
+
 public class Fan {
+    Scanner scanner = new Scanner(System.in);
+    int a = scanner.nextInt();
     public Fan() {
 
     }
