@@ -1,6 +1,6 @@
 package com.BinhHu.pointtriangle;
 
-import java.awt.Point;
+
 
 public class TestTriangle {
     public static void main(String[] args) {

@@ -1,5 +1,5 @@
 package com.BinhHu.pointtriangle;
-import java.awt.Point;
+
 
 public class Triangle {
     private Point vertice1;
