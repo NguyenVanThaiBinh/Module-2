@@ -14,6 +14,9 @@ public class ArrayListDemo {
         while (itr.hasNext()){
             System.out.println(itr.next());
         }
+        arrayList.get(1);
+        arrayList.set(1,"NGU");
+        System.out.println(arrayList);
     }
 
 }
