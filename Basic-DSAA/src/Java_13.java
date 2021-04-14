@@ -1,21 +1,25 @@
 import java.util.Scanner;
+import java.util.Stack;
 
 
 public class Java_13 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-
-
-
-
-        char[] arr = new char[input.length()];
-        for (int i = 0; i < input.length(); i++) {
-            arr[i] = input.charAt(i);
-
+        String s = scanner.nextLine();
+        String[] sArray = s.split("");
+        Stack<String> sStack = new Stack<String>();
+        for (int i = 0; i < sArray.length; i++) {
+            sStack.add(sArray[i]);
         }
-        for (int i = arr.length-1; i >= 0; i--) {
-            System.out.print(arr[i]);
+        System.out.println(sStack);
+
+        Stack<String> newStack = new Stack<>();
+        for (int i = 0; i < sArray.length; i++) {
+            newStack.push(sStack.pop());
+        }
+
+        for (int i = 0; i < newStack.size(); i++) {
+            System.out.print(newStack.get(i));
         }
 
 

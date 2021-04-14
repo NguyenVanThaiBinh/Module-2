@@ -2,12 +2,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-/**
- * Chương trình liệt kê số lần xuất hiện các phần tử trong một mảng
- * nhập từ bàn phím trong java.
- *
- * @author viettuts.vn
- */
+
 public class Java_7 {
     public static Scanner scanner = new Scanner(System.in);
 
@@ -16,21 +11,22 @@ public class Java_7 {
 
         int n = scanner.nextInt();
         // khởi tạo arr
-        int [] arr = new int [n];
+        int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
 
             arr[i] = scanner.nextInt();
         }
         // tìm số lần xuất hiện của các phần tử
-        Map<Integer, Integer> map = new TreeMap<Integer, Integer>();
+        Map<Integer, Integer> map = new TreeMap<>();
         for (int i = 0; i < n; i++) {
             addElement(map, arr[i]);
         }
-
-        for (Integer key : map.keySet()) {
-            System.out.printf("%d - %d; ", key, map.get(key));//tự động sắp xếp theo thứ tự
+        for (int key : map.keySet()) {//in mang
+            System.out.println(key + " - " + map.get(key));
         }
+
+
     }
 
 

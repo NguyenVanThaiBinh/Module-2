@@ -27,7 +27,7 @@ public class Java_9 {
         }
         int temp;
         for (int i = 0; i < arr3.length-1; i++) {
-            for (int j = i + 1; j < arr3.length; j++) {
+            for (int j = i ; j < arr3.length; j++) {
 
                 if (arr3[i] > arr3[j]) {
                     temp = arr3[j];

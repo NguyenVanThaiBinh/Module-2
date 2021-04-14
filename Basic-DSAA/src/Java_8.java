@@ -11,16 +11,16 @@ public class Java_8 {
             arr[i] = scanner.nextInt();
         }
 
-        boolean kt1 = true, kt2 = true;
+        boolean kt1 = true; //kiem tra tang
+        boolean kt2 = true; // kiem tra giam
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] <= arr[i-1]) kt1 = false;
-            if (arr[i] >= arr[i-1]) kt2 = false;
+            if (arr[i] <= arr[i - 1]) kt1 = false;
+            if (arr[i] >= arr[i - 1]) kt2 = false;
         }
 
-        if(kt1 || kt2){
+        if (kt1 || kt2) {
             System.out.println("YES");
-        }
-        else{
+        } else {
             System.out.println("NO");
         }
     }
