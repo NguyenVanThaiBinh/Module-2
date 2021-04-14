@@ -43,12 +43,15 @@ public class LinkedListGeneric {
         listStudents.add(student2);
         listStudents.add(student1);
 
-        for (Student student:listStudents) {
+        extracted(listStudents);
+
+
+    }
+
+    private static void extracted(LinkedList<Student> listStudents) {
+        for (Student student: listStudents) {
             System.out.println(student.toString());
         }
-
-
-
     }
 
 }

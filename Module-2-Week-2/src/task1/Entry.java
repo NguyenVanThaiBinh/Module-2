@@ -8,7 +8,7 @@ public class Entry {
 
         System.out.println(a.x);
 
-        System.out.println(((Subclass)a).x);
+        System.out.println(((Subclass) a).x);
     }
 }
 
