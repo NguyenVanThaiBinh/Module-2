@@ -29,7 +29,7 @@ public class Function {
         System.out.println("5. Nhấn X để thoát.");
         System.out.println("=================================");
         System.out.println("Nhập lựa chọn của bạn: ");
-        System.out.println("");
+        System.out.println();
     }
     static void getMenuLoop() {
 
