@@ -10,14 +10,14 @@ public class Entry extends Function {
         Scanner scanner2 = new Scanner(System.in);
         getMenu();
         int count = 1;
-        int count1=0;
+
 
         LinkedList history = new LinkedList();
 
         String key = " ";
         while (!key.equals("X")) {
             if (count % 4 == 0){
-                getMenu();
+                getMenuLoop();
             }
             key = inPutKey(scanner);
             count++;
@@ -31,12 +31,16 @@ public class Entry extends Function {
                     Config.amount += money;
                     history.add("Nạp tiền: " + money + " VND");
                     System.out.println("Số dư tài khoản là: " + Config.amount + " VND");
+                    System.out.println("----------------");
+                    System.out.println("");
 
                     break;
                 }
                 case "A": {
                     System.out.println("Số dư tài khoản: " + Config.amount + " VND");
                     System.out.println("Bấm nút tiếp theo để giao dịch.");
+                    System.out.println("----------------");
+                    System.out.println("");
 
                     break;
                 }
@@ -47,21 +51,36 @@ public class Entry extends Function {
                     Config.amount -= money;
                     if (Config.amount < 0) {
                         System.out.println("Số dư không đủ!");
+                        System.out.println("Bấm nút tiếp theo để giao dịch.");
                         Config.amount += money;
+                        System.out.println("----------------");
+                        System.out.println("");
                         break;
                     }
                     System.out.println("Bạn vừa rút thành công " + money + " VND vào TK.");
 
                     history.add("Rút tiền: " + money + " VND");
                     System.out.println("Số dư tài khoản là: " + Config.amount + " VND");
+                    System.out.println("----------------");
+                    System.out.println("");
                     break;
 
                 }
                 case "H": {
                     System.out.println("Lịch sử sử dụng: ");
-                    for (int i = history.size()-1; i>=history.size()-3; i--) {
-                        System.out.println(history.get(i));
+                    if(history.size()<3){
+                        for (int i = 0; i < history.size(); i++) {
+                            System.out.println(history.get(i));
+                        }
                     }
+                    else{
+                        for (int i = history.size()-1; i>=history.size()-3; i--) {
+                            System.out.println(history.get(i));
+                        }
+                    }
+                    System.out.println("----------------");
+                    System.out.println("");
+
                     break;
                 }
 

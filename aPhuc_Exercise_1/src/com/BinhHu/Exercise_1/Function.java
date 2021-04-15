@@ -31,6 +31,16 @@ public class Function {
         System.out.println("Nhập lựa chọn của bạn: ");
         System.out.println("");
     }
+    static void getMenuLoop() {
+
+        System.out.println("Menu:");
+        System.out.print("1. Nhấn A để kiểm tra tài khoản.  ");
+        System.out.println("2. Nhấn D để nạp tiền.");
+        System.out.print("3. Nhấn W để rút tiền.  ");
+        System.out.println("4. Nhấn H để xem lịch sử 3 lần gần đây nhất.");
+        System.out.println("5. Nhấn X để thoát.");
+
+    }
 
 
 
