@@ -2,7 +2,7 @@ package com.BinhHu.Exercise_1;
 
 import java.util.*;
 
-public class Function {
+public class ATMOfBinhHu {
 
 
 
@@ -20,7 +20,7 @@ public class Function {
     }
 
     static void getMenu() {
-        System.out.println("Ngân hàng ABC kính chào quý khách: " + Config.name);
+        System.out.println("Ngân hàng ABC kính chào quý khách: " + Account.name);
         System.out.println("Menu:");
         System.out.println("1. Nhấn A để kiểm tra tài khoản.");
         System.out.println("2. Nhấn D để nạp tiền.");

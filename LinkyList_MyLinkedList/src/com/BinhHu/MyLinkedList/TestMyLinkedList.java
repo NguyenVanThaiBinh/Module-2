@@ -4,12 +4,19 @@ public class TestMyLinkedList {
     public static void main(String[] args) {
 
         System.out.println("/=/=/=/= TESTING /=/=/=/=");
-        MyLinkedList ll = new MyLinkedList();
-        ll.addFirst(11);
-        ll.addFirst(12);
-        ll.addFirst(13);
+        MyLinkedList<String> linky = new MyLinkedList("Z");
+        linky.addLast("A");
+        linky.addLast("B");
+        linky.addLast("C");
+        linky.display();
 
-        ll.printList();
+        System.out.println("__-____-_____");
+        System.out.println(linky.removeFirst());
+        System.out.println();
+        linky.display();
+
+
+
 //        System.out.println();
 //        System.out.println("----------");
 //        ll.add(4, 9);
