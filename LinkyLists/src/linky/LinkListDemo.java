@@ -10,6 +10,7 @@ public class LinkListDemo {
         linky.add("Mam");
         linky.add("Nem");
 
+
         Iterator itr = linky.iterator();
         while (itr.hasNext()) {
             System.out.print(itr.next() + " ");
