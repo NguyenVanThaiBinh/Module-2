@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Entry extends ATMOfBinhHu {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         Scanner scanner1 = new Scanner(System.in);
         Scanner scanner2 = new Scanner(System.in);

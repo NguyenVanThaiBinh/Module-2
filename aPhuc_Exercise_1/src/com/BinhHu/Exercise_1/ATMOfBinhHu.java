@@ -5,15 +5,19 @@ import java.util.*;
 public class ATMOfBinhHu {
 
 
-
     static String inPutKey(Scanner scanner) {
         String key;
+        int count = 0;
 
         while (true) {
             key = scanner.nextLine();
             if (key.equals("A") || key.equals("D") || key.equals("W") || key.equals("H") || key.equals("X")) break;
             System.out.println("Bạn nhập sai chức năng!");
             System.out.println("Bấm nút theo menu để tiếp tục giao dịch");
+            count++;
+            if (count % 4 == 0){
+                getMenuLoop();
+            }
         }
 
         return key;
@@ -31,6 +35,7 @@ public class ATMOfBinhHu {
         System.out.println("Nhập lựa chọn của bạn: ");
         System.out.println();
     }
+
     static void getMenuLoop() {
 
         System.out.println("Menu:");
@@ -41,7 +46,6 @@ public class ATMOfBinhHu {
         System.out.println("5. Nhấn X để thoát.");
 
     }
-
 
 
 }
