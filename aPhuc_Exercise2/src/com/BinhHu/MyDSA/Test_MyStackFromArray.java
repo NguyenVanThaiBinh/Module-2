@@ -1,4 +1,4 @@
-package com.BinhHu.Not.MyDSA;
+package com.BinhHu.MyDSA;
 
 public class Test_MyStackFromArray {
     public static void main(String[] args) {
