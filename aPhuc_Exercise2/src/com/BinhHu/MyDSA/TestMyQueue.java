@@ -1,4 +1,4 @@
-package com.BinhHu.MyLinkedList;
+package com.BinhHu.MyDSA;
 
 public class TestMyQueue {
     public static void main(String[] args) {
