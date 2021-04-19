@@ -1,26 +1,28 @@
 package com.BinhHu.MyDSA;
 
 public class MyLinkedList<E> {
-    Node head;
+    //khi nào cũng cần 1 Node temp để duyệt và làm rất nhiều thứ trong LinkedList
+    
+    Node head; //head này khác head head-1, đây là cái head tạm thời thôi
     int numNodes = 0;
     public MyLinkedList(){
-        head = new Node();
+        head = new Node(); //head này là head-2, được tạo mới trong hàm
+        head.next = null; //next này cũng là một đối tượng và được gán là null
+        numNodes++;
+    }
+
+    public MyLinkedList(E data) { //hàm tạo giá trị đầu tiên
+        head = new Node(data); //truyền giá trị vào head đầu
         head.next = null;
         numNodes++;
     }
 
-    public MyLinkedList(E data) {
-        head = new Node(data);
-        head.next = null;
-        numNodes++;
-    }
-
-    public void addLast(E element) {
-        if (head.data == null){
-            head = new Node(element);
-        } else {
-            Node temp = head;
-            while (temp.next != null) {
+    public void addLast(E element) { //thêm vào cuối
+        if (head.data == null){   //nếu head chưa có giá trị thì phải tạo head mới
+            head = new Node(element); //sau đó mới có thể truyền giá trị vào
+        } else { //nếu đã có nút head thì thêm Node mới vào
+            Node temp = head; // tạo một Node tạm để lưu giá trị Node head
+            while (temp.next != null) { // chạy đến cuối phần tử, rồi mới thêm vào
                 temp = temp.next;
             }
             Node addNode = new Node(element);
@@ -42,12 +44,12 @@ public class MyLinkedList<E> {
         return (E) holder.data;
     }
     public  E removeFirst(){
-        Node holder ;
-        holder = head;
-        Node temp = head;
-        head= temp.next;
-        temp = null;
-        numNodes--;
+
+        Node holder = head; //giữ giá trị đầu
+        Node temp = head;//tạo một Node tạm để ko bị mất Node head
+        head= temp.next; //tạo một Node head MỚI bằng giá trị tiếp theo temp.next
+        temp = null;//temp.next để liên kết nút head mới với các liên kết trước trong LinkedList
+        numNodes--;//gán nút head ban đầu bằng nút temp
         return (E)holder.data;
     }
     public E get(int index){

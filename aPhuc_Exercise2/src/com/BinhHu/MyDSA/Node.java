@@ -3,16 +3,11 @@ package com.BinhHu.MyDSA;
 public class Node {
     Object data;
     Node next;
-    Node(Object data){
+   public Node(Object data){
         this.data = data;
     }
 
     public Node() {
 
     }
-
-    Object getData(){
-        return this.data;
-    }
-
 }

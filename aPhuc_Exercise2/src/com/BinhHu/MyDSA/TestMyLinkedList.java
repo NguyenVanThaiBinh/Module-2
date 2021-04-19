@@ -11,9 +11,11 @@ public class TestMyLinkedList {
         linky.display();
 
         System.out.println("__-____-_____");
-        System.out.println(linky.removeFirst());
+        String temp = linky.removeFirst();
+        System.out.println(temp);
         System.out.println();
         linky.display();
+        linky.getSize();
 
 
 
